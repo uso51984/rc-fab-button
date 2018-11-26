@@ -1,0 +1,49 @@
+{
+  "name": "rc-fab-button",
+  "version": "1.5.0",
+  "description": "rc-fab-button",
+  "keywords": [
+    "rc-fab-button",
+    "react-fab-button"
+  ],
+  "homepage": "http://github.com/yiminghe/css-animation",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yiminghe/css-animation.git"
+  },
+  "bugs": {
+    "url": "http://github.com/yiminghe/css-animation/issues"
+  },
+  "license": "MIT",
+  "main": "./lib/index",
+  "module": "./es/index",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "config": {
+    "port": 9001,
+    "entry": {
+      "rc-fab-button": [
+        "./src/index.js"
+      ]
+    }
+  },
+  "scripts": {
+    "dist": "rc-tools run dist --babel-runtime",
+    "build": "rc-tools run build",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub --babel-runtime",
+    "compile": "rc-tools run compile --babel-runtime"
+  },
+  "devDependencies": {
+    "rc-tools": "6.x",
+    "react": "15.x",
+    "react-dom": "15.x"
+  },
+  "dependencies": {
+    "babel-runtime": "6.x"
+  }
+}
