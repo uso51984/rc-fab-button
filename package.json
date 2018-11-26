@@ -1,19 +1,19 @@
 {
   "name": "rc-fab-button",
-  "version": "1.5.0",
+  "version": "1.0.0",
   "description": "rc-fab-button",
   "keywords": [
     "rc-fab-button",
     "react-fab-button"
   ],
-  "homepage": "http://github.com/yiminghe/css-animation",
+  "homepage": "https://github.com/uso51984/rc-fab-button",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yiminghe/css-animation.git"
+    "url": "git@github.com:uso51984/rc-fab-button.git"
   },
   "bugs": {
-    "url": "http://github.com/yiminghe/css-animation/issues"
+    "url": "https://github.com/uso51984/rc-fab-button/issues"
   },
   "license": "MIT",
   "main": "./lib/index",
