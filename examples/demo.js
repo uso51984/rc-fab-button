@@ -9579,7 +9579,7 @@ __WEBPACK_IMPORTED_MODULE_2_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
     __WEBPACK_IMPORTED_MODULE_0__src__["a" /* default */],
     {
       reverse: false,
-      icon: 'add',
+      icon: 'test',
       position: 'bottom-left'
 
     },
