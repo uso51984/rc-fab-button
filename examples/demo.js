@@ -13,7 +13,7 @@ ReactDOM.render(<div>
 
   <FabButton
     reverse={false}
-    icon={'add'}
+    icon={'test'}
     position='bottom-left'
 
   >
