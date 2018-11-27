@@ -43,4 +43,4 @@ ReactDOM.render(<div>
     <span>face</span>
     <span>mail</span>
   </FabButton>
-</div>, document.getElementById('__react-content'));
+</div>, document.getElementById('root'));

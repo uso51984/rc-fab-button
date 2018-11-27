@@ -31,12 +31,16 @@
     }
   },
   "scripts": {
+    "dev": "webpack-dev-server --config ./webpack.dev.js",
     "dist": "rc-tools run dist --babel-runtime",
     "build": "rc-tools run build",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "pub": "rc-tools run pub --babel-runtime",
-    "compile": "rc-tools run compile --babel-runtime"
+    "compile": "rc-tools run compile --babel-runtime",
+    "beeDist": "bee-tools run dist --babel-runtime",
+    "beeCompile": "bee-tools run compile --babel-runtime",
+    "beegh-pages": "bee-tools run gh-pages"
   },
   "devDependencies": {
     "rc-tools": "6.x",
