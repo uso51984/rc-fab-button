@@ -13,7 +13,6 @@ function getOtherProperties(target, source) {
   return obj;
 }
 
-
 class FabButton extends React.PureComponent {
   static defaultProps = {
     angle: 90,

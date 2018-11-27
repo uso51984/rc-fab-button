@@ -43,6 +43,8 @@
     "beegh-pages": "bee-tools run gh-pages"
   },
   "devDependencies": {
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
     "rc-tools": "6.x",
     "react": "15.x",
     "react-dom": "15.x"
