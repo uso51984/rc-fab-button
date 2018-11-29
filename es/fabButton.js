@@ -85,7 +85,7 @@ var FabButton = function (_React$PureComponent) {
         case 'circle':
           var radius = this.itemWidth + distance;
           var dir = {
-            'center': -90,
+            center: -90,
             'top-left': -180,
             'bottom-left': 90,
             'top-right': -90,
@@ -96,9 +96,9 @@ var FabButton = function (_React$PureComponent) {
             this.anim(_i2, rotation, radius, delay);
           }
           break;
+        default:
+          break;
       }
-
-      console.log('itemsStyle', this.itemsStyle);
     }
   }, {
     key: 'anim',
@@ -148,9 +148,10 @@ var FabButton = function (_React$PureComponent) {
 
       this.items = React.Children.map(childrenProp, function (child, index) {
         if (!React.isValidElement(child)) {
-          return;
+          return false;
         }
         var styles = _this2.itemsStyle[index] ? _this2.itemsStyle[index] : {};
+
         return React.createElement(
           'span',
           { style: styles, className: prefixCls + '-item', key: 'item' + index },

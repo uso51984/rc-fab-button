@@ -20,7 +20,7 @@ class FabButton extends React.PureComponent {
     position: 'bottom-right',
     prefixCls: 'bee-fab-button',
     type: 'horizontal',
-    reverse: false
+    reverse: false,
   }
   constructor(props) {
     super(props);
@@ -29,7 +29,7 @@ class FabButton extends React.PureComponent {
   }
 
   state = {
-    visible: false
+    visible: false,
   }
 
   toggle = () => {
@@ -70,7 +70,7 @@ class FabButton extends React.PureComponent {
       case 'circle':
         const radius = this.itemWidth + distance;
         const dir = {
-          'center': -90,
+          center: -90,
           'top-left': -180,
           'bottom-left': 90,
           'top-right': -90,
@@ -81,28 +81,28 @@ class FabButton extends React.PureComponent {
           this.anim(i, rotation, radius, delay);
         }
         break;
+      default:
+        break;
     }
-
-    console.log('itemsStyle', this.itemsStyle)
   }
 
   anim(i, rotation, radius, delay) {
     // -180/左上(lt)、 90/左下(lb)、-90/右上(rt)、0/右下(rb)
-    const angle = (this.props.angle * i - rotation) / 180 * Math.PI;
+    const angle = (((this.props.angle * i) - rotation) / 180) * Math.PI;
     let x = Math.sin(angle) * radius;
     let y = Math.cos(angle) * radius;
     x = parseFloat(x.toFixed(3));
     y = parseFloat(y.toFixed(3));
     if (delay) {
-        this.itemsStyle[i] = {'transition-delay': delay * i + 'ms'};
+      this.itemsStyle[i] = { 'transition-delay': `${delay * i}ms` };
     }
     const xy = `scale(.9) translate(${x}px,${y}px)`;
     this.itemsStyle[i] = {
-        opacity: 1,
-        top: 0,
-        transform: xy,
+      opacity: 1,
+      top: 0,
+      transform: xy,
     };
-}
+  }
 
 
   close() {
@@ -125,22 +125,23 @@ class FabButton extends React.PureComponent {
     const styleClass = classNames(
       prefixCls,
       {
-        [`${prefixCls}-open`]: this.state.visible
+        [`${prefixCls}-open`]: this.state.visible,
       },
       `${prefixCls}-${position}`,
-      className
+      className,
     );
 
     this.items = React.Children.map(childrenProp, (child, index) => {
       if (!React.isValidElement(child)) {
-        return;
+        return false;
       }
       const styles = this.itemsStyle[index] ? this.itemsStyle[index] : {};
+
       return (
         <span style={styles} className={`${prefixCls}-item`} key={`item${index}`}>
           {React.cloneElement(child, child.props)}
         </span>
-      )
+      );
     });
 
     const otherProps = getOtherProperties(restProps, ['angle', 'delay', 'distance', 'reverse', 'type']);
